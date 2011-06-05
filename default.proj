@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<Configuration>Debug</Configuration>
+		<OutputDir>$(MSBuildThisFileDirectory)\build</OutputDir>
+		<SourceDir>$(MSBuildThisFileDirectory)\src</SourceDir>
+		<SolutionFile>$(SourceDir)\baml4dotpeek.sln</SolutionFile>
+	</PropertyGroup>	
+	<Target Name="clean">
+		<RemoveDir Directories="$(OutputDir)" Condition="Exists('$(OutputDir)')" />
+	</Target>
+	<Target Name="build" DependsOnTargets="clean">
+		<MakeDir Directories="$(OutputDir)" Condition="!Exists('$(OutputDir)')" />
+		<MSBuild Projects="$(SolutionFile)" 
+			Properties="Configuration=$(Configuration);OutputPath=$(OutputDir)\" 
+			Targets="Rebuild" />
+	</Target>
+</Project>
