@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ActiproSoftware.Text;
+using ActiproSoftware.Text.Implementation;
 
 namespace Cprieto.DotPeek
 {
@@ -22,6 +24,16 @@ namespace Cprieto.DotPeek
         public XamlViewer()
         {
             InitializeComponent();
+            xmlEditor.Document.Language = GetEmbeddedLanguageSyntax();
+        }
+
+        private ISyntaxLanguage GetEmbeddedLanguageSyntax()
+        {
+            var assembly = GetType().Assembly;
+            var xamlDef = assembly.GetManifestResourceStream("Cprieto.DotPeek.Xaml.langdef");
+
+            var serializer = new SyntaxLanguageDefinitionSerializer();
+            return serializer.LoadFromStream(xamlDef);
         }
     }
 }

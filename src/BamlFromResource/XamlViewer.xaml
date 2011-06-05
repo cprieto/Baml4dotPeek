@@ -10,7 +10,7 @@
         <ToolBar DockPanel.Dock="Top">
         </ToolBar>
         <editor:SyntaxEditor x:Name="xmlEditor" Text="{Binding Path=SourceCode, Mode=OneWay}" DockPanel.Dock="Bottom">
-            <editor:EditorDocument xml:space="preserve" Language="{Binding Path=Language}">
+            <editor:EditorDocument xml:space="preserve">
             </editor:EditorDocument>
         </editor:SyntaxEditor>
     </DockPanel>

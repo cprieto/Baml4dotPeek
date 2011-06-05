@@ -10,7 +10,6 @@ namespace Cprieto.DotPeek
     {
         public string SourceCode { get; private set; }
         public string FileName { get; private set; }
-        public ISyntaxLanguage Language { get; set; }
 
         public XamlViewerViewModel(Resource resource)
         {
@@ -20,22 +19,15 @@ namespace Cprieto.DotPeek
 
         private void Process(Resource resource)
         {
-            using (var stream = (Stream) resource.Value)
+            using (var stream = new MemoryStream())
             {
+                var orig = ((Stream) resource.Value);
+                orig.CopyTo(stream);
+                orig.Seek(0, SeekOrigin.Begin);
+                stream.Seek(0, SeekOrigin.Begin);
                 var xamlDecompiler = new BamlTranslator(stream);
                 SourceCode = xamlDecompiler.ToString();
             }
-
-            Language = GetEmbeddedLanguageSyntax();
-        }
-
-        private ISyntaxLanguage GetEmbeddedLanguageSyntax()
-        {
-            var assembly = GetType().Assembly;
-            var xamlDef = assembly.GetManifestResourceStream("Cprieto.DotPeek.Xaml.langdef");
-            
-            var serializer = new SyntaxLanguageDefinitionSerializer();
-            return serializer.LoadFromStream(xamlDef);
         }
     }
 }
