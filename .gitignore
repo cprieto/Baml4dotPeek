@@ -1,4 +1,4 @@
-dotpeek/plugins
+dotpeek/plugins/
 _ReSharper.*/
 *.docstates
 *.dotcover
