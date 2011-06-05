@@ -18,7 +18,7 @@ namespace Cprieto.DotPeek
             var resource = items[0] as Resource;
             var window = new Window
                              {
-                                 Content = new XamlViewer(),
+                                 Content = new XamlViewer{ DataContext = new XamlViewerViewModel(resource)},
                                  Title = string.Format("Xaml source code for {0}", resource.Name),
                                  ShowInTaskbar = false,
                                  ResizeMode = ResizeMode.NoResize

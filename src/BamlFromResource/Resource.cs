@@ -2,7 +2,7 @@ namespace Reflector.BamlViewer
 {
 	using System;
 
-	internal class Resource
+	public class Resource
 	{
 		private string name;
 		private object value;

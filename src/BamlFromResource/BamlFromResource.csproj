@@ -96,6 +96,7 @@
     <Compile Include="XamlViewer.xaml.cs">
       <DependentUpon>XamlViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XamlViewerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Actions.xml" />

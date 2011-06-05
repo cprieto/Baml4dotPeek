@@ -8,7 +8,7 @@
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
         </ToolBar>
-        <TextBlock DockPanel.Dock="Bottom" Text="Hello!">
+        <TextBlock DockPanel.Dock="Bottom" Text="{Binding Path=SourceCode}">
         </TextBlock>
     </DockPanel>
 </UserControl>
