@@ -1,3 +1,4 @@
+build/
 dotpeek/plugins/
 _ReSharper.*/
 *.docstates
