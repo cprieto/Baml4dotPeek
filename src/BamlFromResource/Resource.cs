@@ -46,6 +46,8 @@ namespace Reflector.BamlViewer
 				this.exception = value;	
 			}
 		}
+
+	    public long Size { get; set; }
 	}
 }
 

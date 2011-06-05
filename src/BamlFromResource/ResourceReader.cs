@@ -294,7 +294,9 @@ namespace Reflector.BamlViewer
 					break;
 
 				case ResourceTypeCode.Stream:
-					resource.Value = new MemoryStream(reader.ReadBytes(reader.ReadInt32()));
+                    var value = new MemoryStream(reader.ReadBytes(reader.ReadInt32()));
+			        resource.Value = value;
+			        resource.Size = value.Length;
 					break;
 
 				default:

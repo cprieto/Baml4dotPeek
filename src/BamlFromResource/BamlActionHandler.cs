@@ -1,14 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows;
 using JetBrains.ActionManagement;
 using JetBrains.Application.DataContext;
 using JetBrains.DotPeek.AssemblyExplorer.Content;
 using JetBrains.IDE.TreeBrowser;
-using JetBrains.TreeModels;
-using JetBrains.UI.TreeView;
 using Reflector.BamlViewer;
 
 namespace Cprieto.DotPeek
@@ -37,7 +33,20 @@ namespace Cprieto.DotPeek
 
         public void Execute(IDataContext context, DelegateExecute nextExecute)
         {
-            System.Diagnostics.Trace.WriteLine("*** Hello!!! ***");
+            var resource = GetResourceNode(context);
+            if (resource == null)
+                return;
+
+            using (var stream = resource.ResourceDisposition.CreateResourceReader())
+            {
+                var window = new Window
+                                 {
+                                     Content = new BamlFileList {DataContext = new ResourceReader(stream).Resources.Where(r => r.Name.EndsWith(".baml"))},
+                                     ShowInTaskbar = false,
+                                     ResizeMode = ResizeMode.NoResize
+                                 };
+                window.ShowDialog();
+            }
         }
 
         private ResourceNode GetResourceNode(IDataContext context)
