@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActiproSoftware.Shared.Wpf351">
+      <HintPath>..\..\dotpeek\ActiproSoftware.Shared.Wpf351.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiproSoftware.SyntaxEditor.Wpf351">
+      <HintPath>..\..\dotpeek\ActiproSoftware.SyntaxEditor.Wpf351.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiproSoftware.Text.Net351">
+      <HintPath>..\..\dotpeek\ActiproSoftware.Text.Net351.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="dotPeek">
       <HintPath>..\..\dotpeek\dotPeek.exe</HintPath>
       <Private>False</Private>
@@ -53,6 +65,7 @@
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Metadata">
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Shell">
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
@@ -110,6 +123,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Xaml.langdef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
