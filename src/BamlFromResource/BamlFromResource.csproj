@@ -89,15 +89,23 @@
       <DependentUpon>BamlFileList.xaml</DependentUpon>
     </Compile>
     <Compile Include="BamlTranslator.cs" />
+    <Compile Include="DecompileBamlCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="ResourceReader.cs" />
+    <Compile Include="XamlViewer.xaml.cs">
+      <DependentUpon>XamlViewer.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Actions.xml" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="BamlFileList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
