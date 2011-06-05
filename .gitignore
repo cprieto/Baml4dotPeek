@@ -1,4 +1,6 @@
 _ReSharper.*/
+*.docstates
+*.dotcover
 *.suo
 *.user
 obj/
