@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dotPeek">
+      <HintPath>..\..\dotpeek\dotPeek.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.DotPeek.Common">
+      <HintPath>..\..\dotpeek\JetBrains.DotPeek.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.ActionManagement">
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.ActionManagement.dll</HintPath>
       <Private>False</Private>
@@ -39,12 +47,27 @@
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.IDE">
+      <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.IDE.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Metadata">
+      <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Shell">
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.UI">
       <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Util">
+      <HintPath>..\..\dotpeek\JetBrains.Platform.ReSharper.Util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Features.Common">
+      <HintPath>..\..\dotpeek\JetBrains.ReSharper.Features.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -57,7 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BamlActionHandler.cs" />
+    <Compile Include="BamlTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourceReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Actions.xml" />
