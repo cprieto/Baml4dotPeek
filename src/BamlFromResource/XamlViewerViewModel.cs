@@ -1,7 +1,4 @@
 using System.IO;
-using System.Resources;
-using ActiproSoftware.Text;
-using ActiproSoftware.Text.Implementation;
 using Reflector.BamlViewer;
 
 namespace Cprieto.DotPeek

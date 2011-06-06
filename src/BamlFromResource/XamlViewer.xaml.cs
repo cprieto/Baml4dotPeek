@@ -25,6 +25,8 @@ namespace Cprieto.DotPeek
         {
             InitializeComponent();
             xmlEditor.Document.Language = GetEmbeddedLanguageSyntax();
+            xmlEditor.Document.IsReadOnly = true;
+            xmlEditor.IsLineNumberMarginVisible = true;
         }
 
         private ISyntaxLanguage GetEmbeddedLanguageSyntax()
