@@ -7,3 +7,5 @@ Baml (Binary Application Markup Language) is a machine friendly representation o
  # Download the addin from the download section
  # Place the addin in the plugin folder of your dotpeek installation
  # Use it :)
+
+Probably you could get more info on this short blogpost [[http://www.cprieto.com/index.php/2011/06/06/xaml_viewer_for_jetbrains_dotpeek_decompiler/|Xaml Viewer for Jetbrain's DotPeek decompiler]]
