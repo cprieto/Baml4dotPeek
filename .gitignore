@@ -1,8 +1,9 @@
 build/
-dotpeek/plugins/
+dotpeek/
 _ReSharper.*/
 *.docstates
 *.dotcover
 *.suo
 *.user
+*.sln.cache
 obj/

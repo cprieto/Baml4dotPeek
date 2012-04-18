@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<actions xmlns="urn:shemas-jetbrains-com:actions-xml">
-  <action id="Cprieto.ShowBamlResources" text="Show Baml resources" />
-  <insert group-id="AssemblyExplorerContextMenu" position="last">
-    <action-ref id="Cprieto.ShowBamlResources"/>
-  </insert>
-</actions>
