@@ -1,11 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{0559B328-68A3-4251-9C7C-8D626442C80F}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\dotpeek\JetBrains.ActionManagement.resources.Schema.Actions.xsd = ..\..\dotpeek\JetBrains.ActionManagement.resources.Schema.Actions.xsd
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BamlFromResource", "BamlFromResource\BamlFromResource.csproj", "{F027699B-DDE1-416E-B8B9-9A2E7216C567}"
 EndProject
 Global

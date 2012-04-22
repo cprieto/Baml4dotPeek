@@ -32,8 +32,6 @@ using JetBrains.Application.PluginSupport;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: PluginDescription("Show a list of Baml resources")]
-[assembly: PluginTitle("Cprieto.DotPeek.BamlResources")]
+[assembly: PluginDescription("Decompile Baml to Xaml")]
+[assembly: PluginTitle("Cprieto.DotPeek.BamlDecompiler")]
 [assembly: PluginVendor("@cprieto")]
-
-[assembly: ActionsXml("Cprieto.DotPeek.Actions.xml")]
